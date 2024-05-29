@@ -1,0 +1,29 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="bayram">
+        <createTable tableName="utilisateurs">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <!-- Vous pouvez ajouter des utilisateurs ici. -->
+    <changeSet id="2" author="bayram">
+        <insert tableName="utilisateurs">
+            <column name="id" valueNumeric="1"/>
+            <column name="name" value="John Doe"/>
+            <column name="email" value="john.doe@example.com"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
