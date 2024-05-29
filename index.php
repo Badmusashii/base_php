@@ -82,6 +82,13 @@
     <?php include 'formulaire.php'; ?>
 
     <p>Essaie pour faire saluer jim => <?php echo $jim->saluer() ?></p>
+    <br>
+
+    <?php
+    echo date('Y-m-d') . "<br>"; // Affiche la date actuelle au format 'AAAA-MM-JJ'
+    echo time() . "<br>"; // Affiche le timestamp Unix actuel
+    ?>
+
     <?php include 'footer.php'; ?>
     <?php include 'filereader.php'; ?>
 </body>
